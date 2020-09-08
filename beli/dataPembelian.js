@@ -44,7 +44,7 @@ const getDataPembelian = async () =>{
                         // console.log("ini data price", price)
                         if(dataPaket.length > 0){
                             localStorage.setItem("dataPaket", JSON.stringify(dataPaket[0]));
-                            window.location.replace("/pembayaran.html")
+                            window.location.replace("/bayar/pembayaran.html")
                         }
                     })
                 });
