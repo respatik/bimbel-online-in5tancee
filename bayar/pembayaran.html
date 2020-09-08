@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/pembayaran.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
 
     </head>
     
@@ -34,7 +35,11 @@
     
     <!-- ***** Navbar Start ***** -->
     <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="pembelian.html"><i><img src="/assets/images/icons8-left-32.png" alt=""></i> Kembali</a>
+        <a class="navbar-brand" href="../beli/pembelian.html"><i><img src="../assets/images/icons8-left-32.png" alt=""></i> Kembali</a>
+        
+        <button type="button" class="btn user" data-container="body" data-toggle="popover" data-placement="left" title="Nama User" data-content="namauser@gmail.com"><i><img src="/assets/images/icons8-user-30.png" alt=""></i>
+        </button>
+        <!-- <a class="navbar-brand user" href="pembelian.html"><i><img src="/assets/images/icons8-user-30.png" alt=""></i></a> -->
     </nav>
     <!-- ***** Navbar End ***** -->
 
@@ -49,16 +54,16 @@
               <div class="products">
                 <h3 class="title">Checkout</h3>
                 <div class="item">
-                  <span class="price">Rp.320.000</span>
-                  <p class="item-name">Product</p>
-                  <p class="item-description">Lorem ipsum dolor sit amet</p>
+                  <span class="price" id="productPrice">Rp.320.000</span>
+                  <p class="item-name" id="productName">Product</p>
+                  <p class="item-description"></p>
                 </div>
                 <div class="item">
                   <span class="price"></span>
                   <p class="item-name"></p>
                   <p class="item-description"></p>
                 </div>
-                <div class="total">Total<span class="price">Rp.320.000</span></div>
+                <div class="total">Total<span class="price" id="totalPrice">Rp.320.000</span></div>
               </div>
               <div class="card-details">
                 <h3 class="title">Credit Card Details</h3>
@@ -84,7 +89,7 @@
                     <input id="cvc" type="text" class="form-control" placeholder="CVC" aria-label="Card Holder" aria-describedby="basic-addon1">
                   </div>
                   <div class="form-group col-sm-12">
-                    <button type="button" class="btn btn-primary btn-block">Proceed</button>
+                    <button type="button" class="btn btn-primary btn-block" id="proceed">Proceed</button>
                   </div>
                 </div>
               </div>
@@ -114,6 +119,7 @@
         </div>
     </footer>
     
+    
     <!-- jQuery -->
     <script src="../assets/js/jquery-2.1.0.min.js"></script>
 
@@ -122,15 +128,23 @@
     <script src="../assets/js/bootstrap.min.js"></script>
 
     <!-- Plugins -->
-    <script src="../assets/js/owl-carousel.js"></script>
-    <script src="../assets/js/scrollreveal.min.js"></script>
-    <script src="../assets/js/waypoints.min.js"></script>
-    <script src="../assets/js/jquery.counterup.min.js"></script>
-    <script src="../assets/js/imgfix.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/imgfix.min.js"></script> 
     
     <!-- Global Init -->
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/checkOutPembayaran.js"></script>
+
+    <!-- popover -->
+    <script>
+        $(function () {
+               $('[data-toggle="popover"]').popover()
+           })
+       </script>
 
   </body>
 </html>
