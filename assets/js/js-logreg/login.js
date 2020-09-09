@@ -12,6 +12,7 @@ function login() {
         if (user[0].password === passwordInput) {
           // simpan data user yang login ke localstorage
           localStorage.setItem("user", JSON.stringify(user[0]));
+          window.location.replace('/profile/profile-1.html')
         } else {
           alert("password anda salah");
         }

@@ -11,7 +11,7 @@ const showPayment = async () => {
       window.location.replace("/success/success.html");
     });
   } catch (error) {
-    alert("maaf terjadi error pada data yang anda inginkan");
+    alert("maaf terjadi error pada data show payment");
   }
 };
 
@@ -27,7 +27,7 @@ const popupDataUser = async () => {
     button.setAttribute("data-content", dataUser.email);
     console.log(button);
   } catch (error) {
-    alert("anda belum login");
+    alert("maaf terjadi kesalahan pada popup user");
   }
 };
 
