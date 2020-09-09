@@ -424,6 +424,10 @@ header
   padding-right: 20px;
 }
 
+.header-area .main-nav .nav li a i.icon-download img{
+  padding-bottom: 10px;
+}
+
 .header-area .main-nav .nav li:last-child {
   padding-right: 0px;
 }
