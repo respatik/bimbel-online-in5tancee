@@ -1,46 +1,62 @@
-let paket = [
-    {
-        nama: "Paket Try Out UTBK",
-        detail: "Untuk kalian yang ingin mengikuti 20x Try Out UTBK. Semakin sering berlatih semakin baik!",
-        harga: 250000
-    },
-    {
-        nama: "Paket Try Out Sekolah Kedinasan",
-        detail: "Untuk kalian yang ingin mengikuti 20x Try Out Sekolah Kedinasan. Semakin sering berlatih semakin mantap!",
-        harga: 250000
-    },
-    {
-        nama: "Paket Try Out CPNS",
-        detail: "Untuk kalian yang ingin mengikuti 5x Try Out CPNS. Asal tidak berbohong, kamu bisa menjadi ASN terbaik untuk negeri!",
-        harga: 100000
-    }
-]
-
 let contohPaket = document.querySelector(".column-paket")
 
-let displayPaket = () => {
-    paket.forEach((paket) => {
-        let card = document.createElement("span");
-        card.className = "contoh-pricelist"
-        card.innerHTML = `
-        <div class="nama">
-        <h3>${paket.nama}</h3></div>
-        <div class="harga">
-        <span class="rupiah">Rp.</span>
-        <span class="harga-num">${paket.harga}</span></div>
-        <div class="detail">
-        <p class="detail-paket">${paket.detail}</p>
-        </div>
-        <div class="buy">
-        <a href="pembayaran.html" class="main-button">Beli Paket Belajar</a>
-        </div>`;
-        contohPaket.appendChild(card);
+fetch('https://5f51a92b5e98480016123c15.mockapi.io/homepage')
+    .then((response) => {
+        return response.json();
     })
-}
 
-displayPaket();
+    .then ((paket) => {
+        paket.forEach((paket) => {
+            let card = document.createElement("span");
+            card.className = "contoh-pricelist"
+            card.innerHTML = `
+            <div class="nama">
+            <h3>${paket.nama}</h3></div>
+            <div class="harga">
+            <span class="rupiah">Rp.</span>
+            <span class="harga-num">${paket.harga}</span></div>
+            <div class="detail">
+            <p class="detail-paket">${paket.detail}</p>
+            </div>
+            <div class="buy">
+            <a href="pembayaran.html" class="main-button">Beli Paket Belajar</a>
+            </div>`;
+            contohPaket.appendChild(card);
+        })
+        paket();
+    })
+    .catch ((error) => {
+        console.log("waduh error");
+    })
 
 let whyIn5tancee = document.querySelector(".column-why")
+
+fetch('https://5f51a92b5e98480016123c15.mockapi.io/why')
+    .then((response) => {
+        return response.json();
+    })
+
+    .then ((why) => {
+        why.forEach((why) => {
+            let cardWhy = document.createElement("span");
+            cardWhy.className = "why-in5tancee"
+            cardWhy.innerHTML = `
+            <div class="img">
+            <img class="gambar" src="${why.img}" alt="">
+            </div>
+            <div class="nama">
+            <h3>${why.nama}</h3></div>
+            <div class="detail">
+            <p class="detail-paket">${why.detail}</p>
+            </div>
+            <div class="buy">`
+            whyIn5tancee.appendChild(cardWhy);
+        })
+        why();
+    })
+    .catch ((error) => {
+        console.log("waduh error");
+    })
 
 let why = [
     {
@@ -64,23 +80,3 @@ let why = [
         img: "assets/images/video_tutorial__monochromatic.png"
     }
 ]
-
-let displayWhy = () => {
-    why.forEach((why) => {
-        let cardWhy = document.createElement("span");
-        cardWhy.className = "why-in5tancee"
-        cardWhy.innerHTML = `
-        <div class="img">
-        <img class="gambar" src="${why.img}" alt="">
-        </div>
-        <div class="nama">
-        <h3>${why.nama}</h3></div>
-        <div class="detail">
-        <p class="detail-paket">${why.detail}</p>
-        </div>
-        <div class="buy">`
-        whyIn5tancee.appendChild(cardWhy);
-    })
-}
-
-displayWhy();
