@@ -28,7 +28,6 @@ const popupDataUser = async () => {
     console.log(button);
   } catch (error) {
     alert("anda belum login");
-    window.location.replace("/pages/login.html");
   }
 };
 
