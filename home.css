@@ -1055,6 +1055,11 @@ TRY IT ... with or without CENTER CENTER
   }
 }
 
+#container{
+  margin: 2em 2em 2em 2em;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+}
+
 .welcome-sign{
   margin: 2em auto 2em auto;
   text-align: center;
@@ -1133,7 +1138,7 @@ TRY IT ... with or without CENTER CENTER
 .column-why{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .why-in5tancee{
