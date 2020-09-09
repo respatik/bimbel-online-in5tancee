@@ -27,7 +27,8 @@ const popupDataUser = async () => {
     button.setAttribute("data-content", dataUser.email);
     console.log(button);
   } catch (error) {
-    alert("maaf terjadi kesalahan pada data");
+    alert("anda belum login");
+    window.location.replace("/pages/login.html");
   }
 };
 
