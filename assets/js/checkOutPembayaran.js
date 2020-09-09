@@ -16,3 +16,19 @@ const showPayment = async() =>{
 }
 
 showPayment();
+
+const popupDataUser = async() =>{
+    try {
+        let dataUser = JSON.parse(localStorage.getItem('user'));
+        console.log(dataUser.email)
+        console.log(dataUser)
+        let button = document.getElementById('icon-user');
+        button.setAttribute('title', dataUser.nama)
+        button.setAttribute('data-content', dataUser.email)
+        console.log(button);
+    } catch (error) {
+        alert('maaf terjadi kesalahan pada data')
+    }
+}
+
+popupDataUser();
