@@ -426,6 +426,7 @@ header
 
 .header-area .main-nav .nav li a i.icon-download img{
   padding-bottom: 5px;
+  margin-right: 5px;
 }
 
 .header-area .main-nav .nav li:last-child {
