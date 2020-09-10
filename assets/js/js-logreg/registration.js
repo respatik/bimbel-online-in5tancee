@@ -27,4 +27,7 @@ const register = async () => {
     options
   );
   let result = await response.json();
+
+  swal("Registrasi berhasil", '', "success");
 };
+
