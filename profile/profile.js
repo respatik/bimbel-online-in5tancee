@@ -12,7 +12,6 @@ const showDataUser = async () =>{
     let dataProfile = JSON.parse(localStorage.getItem('user'));
     console.log(dataProfile)
     document.getElementById('user-name').innerHTML = dataProfile.nama;
-    document.getElementById('user-id').innerHTML = dataProfile.id;
     document.getElementById('profile-name').innerHTML = dataProfile.nama;
     document.getElementById('user-email').innerHTML = dataProfile.email;
     document.getElementById('user-phone').innerHTML = dataProfile.phone;
