@@ -1,5 +1,6 @@
 // buat function async await register
 const register = async () => {
+  try {
   let nameInput = document.getElementById("name").value;
   let birthdayInput = document.getElementById("birthday").value;
   let passwordInput = document.getElementById("password").value;
@@ -33,7 +34,10 @@ const register = async () => {
   
   setTimeout(function () {
     window.location.replace('../pages/login.html')
-  }, 2000);
+  }, 1000);
+  } catch (error) {
+    swal("Registrasi Gagal", '', "error");
+  }
   
 };
 
