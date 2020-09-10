@@ -19,7 +19,7 @@ fetch('https://5f51a92b5e98480016123c15.mockapi.io/homepage')
             <p class="detail-paket">${paket.detail}</p>
             </div>
             <div class="buy">
-            <a href="pembayaran.html" class="main-button">Beli Paket Belajar</a>
+            <a href="bayar/pembayaran.html" class="main-button">Beli Paket Belajar</a>
             </div>`;
             contohPaket.appendChild(card);
         })
