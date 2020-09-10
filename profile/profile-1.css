@@ -15,6 +15,7 @@ body {
 .profile-img img {
   width: 70%;
   height: 200px;
+  /* border: 1px solid #2d4059; */
 }
 .profile-img .file {
   position: relative;
