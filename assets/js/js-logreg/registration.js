@@ -29,5 +29,11 @@ const register = async () => {
   let result = await response.json();
 
   swal("Registrasi berhasil", '', "success");
+
+  
+  setTimeout(function () {
+    window.location.replace('../pages/login.html')
+  }, 2000);
+  
 };
 
