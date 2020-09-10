@@ -80,27 +80,3 @@ let why = [
         img: "assets/images/video_tutorial__monochromatic.png"
     }
 ]
-
-
-function displayLoginLogout(){
-    let buttonDynamic = document.getElementById("dynamic-button");
-    let getUserData = localStorage.getItem("user");
-    console.log(getUserData);
-    console.log(buttonDynamic)
-    if (getUserData !== null) {
-        let profileButton = document.createElement("a");
-        profileButton.innerHTML = "Profile"
-        profileButton.className = "nav-main-button";
-        profileButton.setAttribute("href", "/profile/profile-1.html");
-        buttonDynamic.appendChild(profileButton);
-    } else {
-        let loginButton = document.createElement("a");
-        loginButton.innerHTML = 'Login'
-        loginButton.className = "nav-main-button";
-        loginButton.setAttribute("href", "../pages/login.html");
-        buttonDynamic.appendChild(loginButton);
-    
-    }
-}
-
-displayLoginLogout()
