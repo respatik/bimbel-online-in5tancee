@@ -116,6 +116,10 @@ body {
 
 /* Footer */
 footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-color: #2d4059;
   padding: 30px 0px;
   color: #fff;
