@@ -1,5 +1,6 @@
 // buat function async await register
 const register = async () => {
+  try {
   let nameInput = document.getElementById("name").value;
   let birthdayInput = document.getElementById("birthday").value;
   let passwordInput = document.getElementById("password").value;
@@ -13,6 +14,7 @@ const register = async () => {
     email: emailInput,
     phone: phoneInput,
   };
+  // console.log(userData)
   // post data user
 
   let options = {
@@ -27,21 +29,20 @@ const register = async () => {
     options
   );
   let result = await response.json();
+  console.log(result)
 
-  if (userData !== null){
+  
+  
     swal("Registrasi berhasil", '', "success");
 
     setTimeout(function () {
       window.location.replace('../pages/login.html')
     }, 1000);
+    
+  } catch (error) {
+    swal("Registrasi Gagal", '', "error");
   }
-    else{
-      swal("Registrasi Gagal", '', "error");
-    }
-  
-
-  
-  
+    
   
 };
 
