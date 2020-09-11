@@ -3,6 +3,7 @@ body {
     font-family: "Roboto", sans-serif;
     color: white;
     font-weight: 400;
+    margin-top: 50px;
     font-size: 16px;
     -ms-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
@@ -10,7 +11,7 @@ body {
   }
   
   /* Navbar */
-  header
+  /*header
   --------------------------------------------- 
   */
   
@@ -478,14 +479,18 @@ body {
   }
   .card-img-top{
     width: 346px;
-    height: 400px;
+    height: 286px;
     padding-left: 20px;
     padding-top: 20px;
     padding-right: 20px;
     align-items: center;
     border-radius: 30px;
   }
-  
+  @media (max-width: 760px) {
+     .margin-top2 {
+     margin-top: 20px  !important;
+    }
+  }
   .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   }
@@ -496,7 +501,9 @@ body {
     border-radius: 20px;
     padding: 10px;
     outline: none;
-    width: 508px;
+    width: 100px;
+    height: 30px;
+    min-width: 30px;
   }
   
   .cari::placeholder {
@@ -511,7 +518,14 @@ body {
     transform: scale(1.1);
   
   }
+
+  .pil{
+    margin: auto;
+  }
   .pilihan {
+    
+    border: 1px solid black;
+     align-items: center;
     font-size: 13px;
     border-radius: 20px;
     padding: 10px;
@@ -523,6 +537,7 @@ body {
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
   }
+
   .card-body{
     height: 188px;
     border-radius: 20px;
@@ -530,29 +545,43 @@ body {
   
   .desktop {
     color: black;
-    font-size: 30px;
+    font-size: 22px;
     font-weight: 600;
     margin-left: 20px;
     margin-top: 20px;
   }
   
   .gambar-src {
-    width: 100px;
+    width: 100%;
     height: 100px;
     padding-right: 10px;
     margin-top: 13px;
     margin-bottom: 13px;
-    margin-left: -20px;
+    margin-left: 10px;
     border-radius: 10px;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    /* make sure the image will not over the division */
+    max-height:100%;
+    max-width:100%;
+    /* center the image */
+    display:block;
+    margin: auto;
   }
   
   .pil .pilihan {
     padding: 3px;
   }
-  
+
+  .text{
+    text-align: center;
+  }
   .artik p {
     font-size: 18px;
-    margin-left: -90px;
+  
   }
   
   .akhir {
@@ -580,6 +609,7 @@ body {
     margin-bottom: 20px;
     border: none;
   }
+
   
   /* Cari Artikel 2 */
   .cari-artikel-2 {
@@ -588,8 +618,8 @@ body {
   }
   
   .cari-artikel-2 img {
-    width: 346px;
-    height: 200px;
+    width: 100%;
+    height: auto;
     padding-left: 20px;
     padding-top: 20px;
     padding-right: 20px;
@@ -603,19 +633,15 @@ body {
   
   /* Cari Artikel 3 */
   .cari-artikel-3 {
-    margin-bottom: 50px;
-    font-weight: 600;
-  }
-  
-  .cari-artikel-3 img {
-    width: 346px;
-    height: 200px;
+    width: 100%;
+    height: auto;
     padding-left: 20px;
     padding-top: 20px;
     padding-right: 20px;
     align-items: center;
   }
   
+
   /* 
   ---------------------------------------------
   footer
@@ -666,6 +692,7 @@ body {
     letter-spacing: 0.88px;
     text-transform: capitalize;
   }
+
   
   @media (max-width: 991px) {
     footer .copyright {
